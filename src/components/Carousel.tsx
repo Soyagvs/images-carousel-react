@@ -8,6 +8,7 @@ import '../styles/styles.css'
 import arrowLeft from '../assets/img/left.png'
 import arrowRight from '../assets/img/right.png'
 
+
 interface Props {
     slides: string[]
 }
@@ -35,15 +36,17 @@ function Carousel({slides }:Props){
         >
             {slides.map((slide, index) => (
                 <SwiperSlide key={index} className='slide-inner'>
-                    <img src={slide} alt='' />
+                    <img src={slide} alt=''/>
                 </SwiperSlide>
             ))}
+
             <div className="button-prev">
                 <img src={arrowLeft} alt='Left' />
             </div>
             <div className="button-next">
                 <img src={arrowRight}  alt="Right" />
             </div>
+            
         </Swiper>
     )
 }
